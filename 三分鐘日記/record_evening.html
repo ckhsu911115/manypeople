@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晚上日記 - 三分鐘日記</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>晚上日記</h1>
+        <form action="save_evening_diary.php" method="POST">
+            <textarea name="good_things" placeholder="今日的三件好事：列出今天發生的三件好事"></textarea>
+            <textarea name="reflection" placeholder="自我反思：寫下今天學到的一件事情或一個經驗"></textarea>
+            <textarea name="improvement" placeholder="改進之處：列出今天可以改進的地方"></textarea>
+            <button type="submit">保存</button>
+        </form>
+        <a href="index.html">返回首頁</a>
+    </div>
+</body>
+</html>

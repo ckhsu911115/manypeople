@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查看日記 - 三分鐘日記</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>查看日記</h1>
+
+        <h2>根據日期查看</h2>
+        <form action="view_diary.php" method="GET">
+            <label for="date">日期：</label>
+            <input type="date" name="date" required>
+            <button type="submit" name="mode" value="date">查看</button>
+        </form>
+
+        <h2>根據題目分類查看</h2>
+        <form action="view_diary.php" method="GET">
+            <label for="category">類別：</label>
+            <select name="category" required>
+                <option value="gratitude">感恩練習</option>
+                <option value="goals">今日目標</option>
+                <option value="affirmation">積極肯定</option>
+                <option value="good_things">今日的三件好事</option>
+                <option value="reflection">自我反思</option>
+                <option value="improvement">改進之處</option>
+            </select>
+            <label for="start_date">開始日期：</label>
+            <input type="date" name="start_date" required>
+            <label for="end_date">結束日期：</label>
+            <input type="date" name="end_date" required>
+            <button type="submit" name="mode" value="category">查看</button>
+        </form>
+
+        <a href="index.html">返回首頁</a>
+    </div>
+</body>
+</html>

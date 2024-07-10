@@ -1,0 +1,91 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #BFC8D7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header {
+    background-color: #E3E2B4;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+h1 {
+    color: #E2D2D2;
+    margin: 20px 0;
+}
+
+.cute-date {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, button, select {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #E3E2B4;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #E2D2D2;
+}
+
+a.btn {
+    display: block;
+    background-color: #E3E2B4;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+a.btn:hover {
+    background-color: #E2D2D2;
+}
+
+.status-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    display: none;
+}
+
+.logout-btn {
+    margin-top: 20px;
+    background-color: #E3E2B4;
+}
+
+.logout-btn:hover {
+    background-color: #E2D2D2;
+}

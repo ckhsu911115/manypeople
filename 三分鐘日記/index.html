@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁 - 三分鐘日記</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('check_diary_status.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.morning_written) {
+                        document.getElementById('morning-icon').style.display = 'inline';
+                    }
+                    if (data.evening_written) {
+                        document.getElementById('evening-icon').style.display = 'inline';
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+
+            // 顯示今日日期
+            var today = new Date();
+            var dateString = today.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
+            document.getElementById('today-date').textContent = dateString;
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="today-date" class="cute-date"></h1>
+        </div>
+        <h1>歡迎來到三分鐘日記</h1>
+        
+        <div class="buttons">
+            <a href="record_morning.html" class="btn">
+                早上日記 
+                <img id="morning-icon" src="OK.png" alt="已經寫了" class="status-icon">
+            </a>
+            <a href="record_evening.html" class="btn">
+                晚上日記
+                <img id="evening-icon" src="OK.png" alt="已經寫了" class="status-icon">
+            </a>
+            <a href="view_diary.html" class="btn">查看日記</a>
+        </div>
+
+        <form action="logout.php" method="POST">
+            <button type="submit" class="logout-btn">登出</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>早上日記 - 三分鐘日記</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>早上日記</h1>
+        <form action="save_morning_diary.php" method="POST">
+            <textarea name="gratitude" placeholder="感恩練習：列出三件感恩的事情"></textarea>
+            <textarea name="goals" placeholder="設定今日目標：寫下三個今日目標"></textarea>
+            <textarea name="affirmation" placeholder="積極肯定：寫下一句積極肯定的話"></textarea>
+            <button type="submit">保存</button>
+        </form>
+        <a href="index.html">返回首頁</a>
+    </div>
+</body>
+</html>
